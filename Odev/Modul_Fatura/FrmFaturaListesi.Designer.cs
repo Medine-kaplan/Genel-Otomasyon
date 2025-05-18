@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFaturaListesi));
             this.btnsil = new DevExpress.XtraEditors.SimpleButton();
             this.btnara = new DevExpress.XtraEditors.SimpleButton();
@@ -43,9 +44,11 @@
             this.Liste = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.STOKODU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.STOKADI = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.STOKBARKOD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FATURANO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FATURATURU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CARIKODU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SagTik = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.SagTikYenile = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFaturaNo.Properties)).BeginInit();
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFaturaTuru.Properties)).BeginInit();
@@ -61,6 +64,7 @@
             this.xtraTabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Liste)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.SagTik.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnsil
@@ -80,6 +84,7 @@
             this.btnara.Size = new System.Drawing.Size(78, 36);
             this.btnara.TabIndex = 6;
             this.btnara.Text = "Ara";
+            this.btnara.Click += new System.EventHandler(this.btnara_Click);
             // 
             // labelControl3
             // 
@@ -139,6 +144,7 @@
             "Alış İade Faturası"});
             this.TxtFaturaTuru.Size = new System.Drawing.Size(144, 20);
             this.TxtFaturaTuru.TabIndex = 1;
+            this.TxtFaturaTuru.SelectedIndexChanged += new System.EventHandler(this.TxtFaturaTuru_SelectedIndexChanged);
             // 
             // TxtTarih
             // 
@@ -197,14 +203,15 @@
             this.Liste.TabIndex = 0;
             this.Liste.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.Liste.Click += new System.EventHandler(this.Liste_Click);
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.ID,
-            this.STOKODU,
-            this.STOKADI,
-            this.STOKBARKOD});
+            this.FATURANO,
+            this.FATURATURU,
+            this.CARIKODU});
             this.gridView1.GridControl = this.Liste;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
@@ -215,38 +222,52 @@
             this.ID.FieldName = "ID";
             this.ID.Name = "ID";
             // 
-            // STOKODU
+            // FATURANO
             // 
-            this.STOKODU.Caption = "STOKKODU";
-            this.STOKODU.FieldName = "STOKKODU";
-            this.STOKODU.Name = "STOKODU";
-            this.STOKODU.OptionsColumn.AllowEdit = false;
-            this.STOKODU.OptionsColumn.AllowFocus = false;
-            this.STOKODU.OptionsColumn.FixedWidth = true;
-            this.STOKODU.Visible = true;
-            this.STOKODU.VisibleIndex = 0;
+            this.FATURANO.Caption = "FATURA NUMARASI";
+            this.FATURANO.FieldName = "Fatura Numarası";
+            this.FATURANO.Name = "FATURANO";
+            this.FATURANO.OptionsColumn.AllowEdit = false;
+            this.FATURANO.OptionsColumn.AllowFocus = false;
+            this.FATURANO.OptionsColumn.FixedWidth = true;
+            this.FATURANO.Visible = true;
+            this.FATURANO.VisibleIndex = 0;
             // 
-            // STOKADI
+            // FATURATURU
             // 
-            this.STOKADI.Caption = "STOKADI";
-            this.STOKADI.FieldName = "STOKADI";
-            this.STOKADI.Name = "STOKADI";
-            this.STOKADI.OptionsColumn.AllowEdit = false;
-            this.STOKADI.OptionsColumn.AllowFocus = false;
-            this.STOKADI.OptionsColumn.FixedWidth = true;
-            this.STOKADI.Visible = true;
-            this.STOKADI.VisibleIndex = 1;
+            this.FATURATURU.Caption = "FATURA TÜRÜ";
+            this.FATURATURU.FieldName = "FATURATURU";
+            this.FATURATURU.Name = "FATURATURU";
+            this.FATURATURU.OptionsColumn.AllowEdit = false;
+            this.FATURATURU.OptionsColumn.AllowFocus = false;
+            this.FATURATURU.OptionsColumn.FixedWidth = true;
+            this.FATURATURU.Visible = true;
+            this.FATURATURU.VisibleIndex = 1;
             // 
-            // STOKBARKOD
+            // CARIKODU
             // 
-            this.STOKBARKOD.Caption = "STOKBARKOD";
-            this.STOKBARKOD.FieldName = "STOKBARKOD";
-            this.STOKBARKOD.Name = "STOKBARKOD";
-            this.STOKBARKOD.OptionsColumn.AllowEdit = false;
-            this.STOKBARKOD.OptionsColumn.AllowFocus = false;
-            this.STOKBARKOD.OptionsColumn.FixedWidth = true;
-            this.STOKBARKOD.Visible = true;
-            this.STOKBARKOD.VisibleIndex = 2;
+            this.CARIKODU.Caption = "CARİ KODU";
+            this.CARIKODU.FieldName = "CARIKODU";
+            this.CARIKODU.Name = "CARIKODU";
+            this.CARIKODU.OptionsColumn.AllowEdit = false;
+            this.CARIKODU.OptionsColumn.AllowFocus = false;
+            this.CARIKODU.OptionsColumn.FixedWidth = true;
+            this.CARIKODU.Visible = true;
+            this.CARIKODU.VisibleIndex = 2;
+            // 
+            // SagTik
+            // 
+            this.SagTik.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SagTikYenile});
+            this.SagTik.Name = "SagTik";
+            this.SagTik.Size = new System.Drawing.Size(181, 48);
+            // 
+            // SagTikYenile
+            // 
+            this.SagTikYenile.Name = "SagTikYenile";
+            this.SagTikYenile.Size = new System.Drawing.Size(180, 22);
+            this.SagTikYenile.Text = "YENİLE";
+            this.SagTikYenile.Click += new System.EventHandler(this.SagTikYenile_Click);
             // 
             // FrmFaturaListesi
             // 
@@ -257,6 +278,7 @@
             this.IconOptions.LargeImage = global::Odev.Properties.Resources.chartsshowlegend_32x32;
             this.Name = "FrmFaturaListesi";
             this.Text = "Fatura Listesi";
+            this.Load += new System.EventHandler(this.FrmFaturaListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TxtFaturaNo.Properties)).EndInit();
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
@@ -273,6 +295,7 @@
             this.xtraTabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Liste)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.SagTik.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -291,10 +314,12 @@
         private DevExpress.XtraGrid.GridControl Liste;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn ID;
-        private DevExpress.XtraGrid.Columns.GridColumn STOKODU;
-        private DevExpress.XtraGrid.Columns.GridColumn STOKADI;
-        private DevExpress.XtraGrid.Columns.GridColumn STOKBARKOD;
+        private DevExpress.XtraGrid.Columns.GridColumn FATURANO;
+        private DevExpress.XtraGrid.Columns.GridColumn FATURATURU;
+        private DevExpress.XtraGrid.Columns.GridColumn CARIKODU;
         private DevExpress.XtraEditors.ComboBoxEdit TxtFaturaTuru;
         private DevExpress.XtraEditors.DateEdit TxtTarih;
+        private System.Windows.Forms.ContextMenuStrip SagTik;
+        private System.Windows.Forms.ToolStripMenuItem SagTikYenile;
     }
 }

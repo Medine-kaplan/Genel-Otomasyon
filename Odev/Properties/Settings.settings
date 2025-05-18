@@ -2,21 +2,43 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Odev.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
+    <Setting Name="cs1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=</Value>
+    </Setting>
+    <Setting Name="cs_Sunucu" Type="System.String" Scope="User">
+      <Value Profile="(Default)">;</Value>
+    </Setting>
+    <Setting Name="cs2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Initial Catalog=</Value>
+    </Setting>
+    <Setting Name="cs_Database" Type="System.String" Scope="User">
+      <Value Profile="(Default)">;</Value>
+    </Setting>
+    <Setting Name="cs3" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">User Id=</Value>
+    </Setting>
+    <Setting Name="cs_UserID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">;</Value>
+    </Setting>
+    <Setting Name="cs4" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Password=</Value>
+    </Setting>
+    <Setting Name="cs_Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">;</Value>
+    </Setting>
+    <Setting Name="Database" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="m" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
     <Setting Name="OtomasyonConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionString&gt;Data Source=DESKTOP-1PHU0I3;Initial Catalog=Otomasyon;Integrated Security=True;TrustServerCertificate=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=.;Initial Catalog=Otomasyon;Integrated Security=True;Encrypt=True;TrustServerCertificate=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=DESKTOP-1PHU0I3;Initial Catalog=Otomasyon;Integrated Security=True;TrustServerCertificate=True</Value>
-    </Setting>
-    <Setting Name="OtomasyonConnectionString1" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionString&gt;Data Source=DESKTOP-1PHU0I3;Initial Catalog=Otomasyon;Integrated Security=True;Encrypt=False&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=DESKTOP-1PHU0I3;Initial Catalog=Otomasyon;Integrated Security=True;Encrypt=False</Value>
+      <Value Profile="(Default)">Data Source=.;Initial Catalog=Otomasyon;Integrated Security=True;Encrypt=True;TrustServerCertificate=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -57,6 +57,17 @@
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.Btnsaat = new DevExpress.XtraBars.BarStaticItem();
             this.BtnKasaHareketleri = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnMusteriCeki = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnKendiCekimiz = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnBankayaCekCikisi = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnCariyeCekCikisi = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnCekListesi = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnkullanici = new DevExpress.XtraBars.BarButtonItem();
+            this.txtkulanici = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -69,6 +80,8 @@
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.ALC = new DevExpress.XtraNavBar.NavBarControl();
@@ -96,9 +109,18 @@
             this.navbtnkasahareketleri = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
             this.alert = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.bar1 = new DevExpress.XtraBars.Bar();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.bar3 = new DevExpress.XtraBars.Bar();
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ALC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -132,17 +154,30 @@
             this.BtnAlisIrsaliye,
             this.barStaticItem1,
             this.Btnsaat,
-            this.BtnKasaHareketleri});
-            this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 29;
+            this.BtnKasaHareketleri,
+            this.barButtonItem1,
+            this.barBtnMusteriCeki,
+            this.barBtnKendiCekimiz,
+            this.barBtnBankayaCekCikisi,
+            this.barBtnCariyeCekCikisi,
+            this.barButtonItem2,
+            this.barButtonItem3,
+            this.barBtnCekListesi,
+            this.barButtonItem4,
+            this.btnkullanici,
+            this.txtkulanici});
+            this.ribbon.Location = new System.Drawing.Point(0, 21);
+            this.ribbon.MaxItemId = 40;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage3,
             this.ribbonPage4,
-            this.ribbonPage5});
-            this.ribbon.Size = new System.Drawing.Size(908, 177);
+            this.ribbonPage5,
+            this.ribbonPage6});
+            this.ribbon.QuickToolbarItemLinks.Add(this.barButtonItem4);
+            this.ribbon.Size = new System.Drawing.Size(908, 169);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
@@ -314,6 +349,7 @@
             this.BtnStisFaturasi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnStisFaturasi.ImageOptions.LargeImage")));
             this.BtnStisFaturasi.LargeWidth = 100;
             this.BtnStisFaturasi.Name = "BtnStisFaturasi";
+            this.BtnStisFaturasi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnStisFaturasi_ItemClick);
             // 
             // BtnSatisIadeFaturasi
             // 
@@ -323,6 +359,7 @@
             this.BtnSatisIadeFaturasi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnSatisIadeFaturasi.ImageOptions.LargeImage")));
             this.BtnSatisIadeFaturasi.LargeWidth = 100;
             this.BtnSatisIadeFaturasi.Name = "BtnSatisIadeFaturasi";
+            this.BtnSatisIadeFaturasi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnSatisIadeFaturasi_ItemClick);
             // 
             // BtnAlisFturasi
             // 
@@ -387,6 +424,90 @@
             this.BtnKasaHareketleri.ImageOptions.LargeImage = global::Odev.Properties.Resources.bonote_32x32;
             this.BtnKasaHareketleri.Name = "BtnKasaHareketleri";
             this.BtnKasaHareketleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnKasaHareketleri_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 29;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barBtnMusteriCeki
+            // 
+            this.barBtnMusteriCeki.Caption = "Müşteri Çeki";
+            this.barBtnMusteriCeki.Id = 30;
+            this.barBtnMusteriCeki.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnMusteriCeki.ImageOptions.LargeImage")));
+            this.barBtnMusteriCeki.LargeWidth = 100;
+            this.barBtnMusteriCeki.Name = "barBtnMusteriCeki";
+            this.barBtnMusteriCeki.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnMusteriCeki_ItemClick);
+            // 
+            // barBtnKendiCekimiz
+            // 
+            this.barBtnKendiCekimiz.Caption = "Kendi Çekimiz";
+            this.barBtnKendiCekimiz.Id = 31;
+            this.barBtnKendiCekimiz.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnKendiCekimiz.ImageOptions.LargeImage")));
+            this.barBtnKendiCekimiz.LargeWidth = 100;
+            this.barBtnKendiCekimiz.Name = "barBtnKendiCekimiz";
+            this.barBtnKendiCekimiz.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnKendiCekimiz_ItemClick);
+            // 
+            // barBtnBankayaCekCikisi
+            // 
+            this.barBtnBankayaCekCikisi.Caption = "Bankaya Çek Çıkışı";
+            this.barBtnBankayaCekCikisi.Id = 32;
+            this.barBtnBankayaCekCikisi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnBankayaCekCikisi.ImageOptions.LargeImage")));
+            this.barBtnBankayaCekCikisi.LargeWidth = 100;
+            this.barBtnBankayaCekCikisi.Name = "barBtnBankayaCekCikisi";
+            this.barBtnBankayaCekCikisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnBankayaCekCikisi_ItemClick);
+            // 
+            // barBtnCariyeCekCikisi
+            // 
+            this.barBtnCariyeCekCikisi.Caption = "Cariye Çek Çıkışı";
+            this.barBtnCariyeCekCikisi.Id = 33;
+            this.barBtnCariyeCekCikisi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnCariyeCekCikisi.ImageOptions.LargeImage")));
+            this.barBtnCariyeCekCikisi.LargeWidth = 100;
+            this.barBtnCariyeCekCikisi.Name = "barBtnCariyeCekCikisi";
+            this.barBtnCariyeCekCikisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnCariyeCekCikisi_ItemClick);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Çek Listesi";
+            this.barButtonItem2.Id = 34;
+            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Çek Listesi";
+            this.barButtonItem3.Id = 35;
+            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.barButtonItem3.LargeWidth = 100;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // barBtnCekListesi
+            // 
+            this.barBtnCekListesi.Caption = "Çek Listesi";
+            this.barBtnCekListesi.Id = 36;
+            this.barBtnCekListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnCekListesi.ImageOptions.LargeImage")));
+            this.barBtnCekListesi.LargeWidth = 100;
+            this.barBtnCekListesi.Name = "barBtnCekListesi";
+            this.barBtnCekListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnCekListesi_ItemClick);
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "barBtnKullanici";
+            this.barButtonItem4.Id = 37;
+            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
+            // 
+            // btnkullanici
+            // 
+            this.btnkullanici.Caption = "Kullanııc:";
+            this.btnkullanici.Id = 38;
+            this.btnkullanici.Name = "btnkullanici";
+            // 
+            // txtkulanici
+            // 
+            this.txtkulanici.Id = 39;
+            this.txtkulanici.Name = "txtkulanici";
             // 
             // ribbonPage1
             // 
@@ -489,11 +610,31 @@
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "İrsaliye İşlemleri";
             // 
+            // ribbonPage6
+            // 
+            this.ribbonPage6.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup8});
+            this.ribbonPage6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage6.ImageOptions.Image")));
+            this.ribbonPage6.Name = "ribbonPage6";
+            this.ribbonPage6.Text = "ÇEKLER";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.barBtnMusteriCeki);
+            this.ribbonPageGroup8.ItemLinks.Add(this.barBtnKendiCekimiz);
+            this.ribbonPageGroup8.ItemLinks.Add(this.barBtnBankayaCekCikisi);
+            this.ribbonPageGroup8.ItemLinks.Add(this.barBtnCariyeCekCikisi);
+            this.ribbonPageGroup8.ItemLinks.Add(this.barBtnCekListesi);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.ribbonPageGroup8.Text = "Çek İşlemleri";
+            // 
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem1);
             this.ribbonStatusBar.ItemLinks.Add(this.Btnsaat);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 477);
+            this.ribbonStatusBar.ItemLinks.Add(this.btnkullanici);
+            this.ribbonStatusBar.ItemLinks.Add(this.txtkulanici);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 456);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(908, 24);
@@ -532,10 +673,10 @@
             this.navbtnkasadevir,
             this.navbtnKasatahsilatodeme,
             this.navbtnkasahareketleri});
-            this.ALC.Location = new System.Drawing.Point(0, 177);
+            this.ALC.Location = new System.Drawing.Point(0, 190);
             this.ALC.Name = "ALC";
             this.ALC.OptionsNavPane.ExpandedWidth = 140;
-            this.ALC.Size = new System.Drawing.Size(140, 300);
+            this.ALC.Size = new System.Drawing.Size(140, 266);
             this.ALC.TabIndex = 3;
             this.ALC.Text = "navBarControl1";
             // 
@@ -694,6 +835,83 @@
             this.navBarGroup5.Caption = "FATURA";
             this.navBarGroup5.Name = "navBarGroup5";
             // 
+            // barManager1
+            // 
+            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.bar1,
+            this.bar3});
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barButtonItem5});
+            this.barManager1.MaxItemId = 1;
+            this.barManager1.StatusBar = this.bar3;
+            this.barManager1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barManager1_ItemClick);
+            // 
+            // bar1
+            // 
+            this.bar1.BarName = "Tools";
+            this.bar1.DockCol = 0;
+            this.bar1.DockRow = 0;
+            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5)});
+            this.bar1.Text = "Tools";
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "Yetki";
+            this.barButtonItem5.Id = 0;
+            this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
+            // 
+            // bar3
+            // 
+            this.bar3.BarName = "Status bar";
+            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
+            this.bar3.DockCol = 0;
+            this.bar3.DockRow = 0;
+            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
+            this.bar3.OptionsBar.AllowQuickCustomization = false;
+            this.bar3.OptionsBar.DrawDragBorder = false;
+            this.bar3.OptionsBar.UseWholeRow = true;
+            this.bar3.Text = "Status bar";
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(908, 21);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 480);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(908, 21);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 21);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 459);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(908, 21);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 459);
+            // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -702,15 +920,22 @@
             this.Controls.Add(this.ALC);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("AnaForm.IconOptions.LargeImage")));
             this.IsMdiContainer = true;
             this.Name = "AnaForm";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "AnaForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AnaForm_FormClosed);
+            this.Load += new System.EventHandler(this.AnaForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ALC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -784,5 +1009,26 @@
         private DevExpress.XtraNavBar.NavBarItem navbtnKasatahsilatodeme;
         private DevExpress.XtraNavBar.NavBarItem navbtnkasahareketleri;
         private DevExpress.XtraBars.Alerter.AlertControl alert;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barBtnMusteriCeki;
+        private DevExpress.XtraBars.BarButtonItem barBtnKendiCekimiz;
+        private DevExpress.XtraBars.BarButtonItem barBtnBankayaCekCikisi;
+        private DevExpress.XtraBars.BarButtonItem barBtnCariyeCekCikisi;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem barBtnCekListesi;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem btnkullanici;
+        private DevExpress.XtraBars.BarButtonItem txtkulanici;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.Bar bar1;
+        private DevExpress.XtraBars.Bar bar3;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
     }
 }

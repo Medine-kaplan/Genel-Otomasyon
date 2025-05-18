@@ -14,12 +14,27 @@ namespace Odev
     public partial class AnaForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         Fonksiyonlar.Formlar Formlar=new Fonksiyonlar.Formlar();
+        public static Fonksiyonlar.TBL_KULLANICILAR Kullanici;
         public static int UserID = -1;
         public static int Aktarma = -1;
 
         public AnaForm()
         {
             InitializeComponent();
+        }
+        public AnaForm(Fonksiyonlar.TBL_KULLANICILAR GelenKullanici)
+        {
+
+            InitializeComponent();
+            Kullanici = GelenKullanici;
+            UserID = Kullanici.ID;
+            txtkulanici.Caption = Kullanici.KULLANICI;
+            if (Kullanici.KODU=="Normal")
+            {
+                btnkullanici.Visibility = BarItemVisibility.Never;
+            }
+        
+        
         }
 
         private void ribbon_Click(object sender, EventArgs e)
@@ -239,7 +254,79 @@ namespace Odev
         private void navBtnBankaHareketleri_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             Formlar.BankaHareketleri();
-        } 
+        }
         #endregion
+
+        #region çek menüleri
+        private void barBtnMusteriCeki_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Formlar.MusteriCeki();
+        }
+        private void barBtnCekListesi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Formlar.CekListesi();
+        }
+        private void barBtnKendiCekimiz_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Formlar.KendiCekimiz();
+        }
+
+        private void barBtnBankayaCekCikisi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Formlar.BankayaCekCikisi();
+        }
+
+        private void barBtnCariyeCekCikisi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Formlar.CariyeCekCikisi();
+        }
+
+
+
+
+
+        #endregion
+
+        private void AnaForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BtnStisFaturasi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Formlar.Fatura();
+        }
+
+        private void BtnSatisIadeFaturasi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Formlar.FaturaListesi();
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Formlar.KullaniciYonetimi();
+        }
+
+        private void AnaForm_Load(object sender, EventArgs e)
+
+        {
+        }
+         
+
+        
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //YETKİ BUTONUNUN KODLARIIIII
+
+            
+
+        }
+
+        private void barManager1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //this.Validate();
+            //this.barManager1Source.EndEdit();
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSatisFaturasi));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
@@ -36,12 +37,12 @@
             this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
             this.TxtKasaAdi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.TxtKasaKodu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.TxtHesapNO = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.TxtHesapAdi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.TxtHesapAdi = new DevExpress.XtraEditors.ButtonEdit();
+            this.TxtKasaKodu = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.TxtIrsalıyeNo = new DevExpress.XtraEditors.TextEdit();
@@ -52,21 +53,19 @@
             this.TxtFaturaTarihi = new DevExpress.XtraEditors.DateEdit();
             this.TxtIrsalıyeTarihi = new DevExpress.XtraEditors.DateEdit();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.TxtOdemeYeri = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.TxtFaturaTuru = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.TxtCariAdi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.TxtCariKodu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.TxtCariKodu = new DevExpress.XtraEditors.ButtonEdit();
+            this.TxtFaturaTuru = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.TxtOdemeYeri = new DevExpress.XtraEditors.ComboBoxEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
             this.TxtGenelToplam = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.TxtIndirim = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.TxtKDV = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.TxtAraToplam = new DevExpress.XtraEditors.TextEdit();
@@ -74,15 +73,26 @@
             this.TxtAciklama = new DevExpress.XtraEditors.MemoEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.satisFaturasiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colBARKOD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSTOKKODU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSTOKADI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBIRIM = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMIKTAR = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBIRIMFIYAT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colKDV = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTOPLAM = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BtnButonSec = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.datasetlerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
             this.groupControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtKasaAdi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtKasaKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtHesapNO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtHesapAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtKasaKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtIrsalıyeNo.Properties)).BeginInit();
@@ -93,23 +103,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.TxtIrsalıyeTarihi.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtOdemeYeri.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtFaturaTuru.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtCariAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtCariKodu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtFaturaTuru.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtOdemeYeri.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).BeginInit();
             this.groupControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtGenelToplam.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtIndirim.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtKDV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAraToplam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.satisFaturasiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnButonSec)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datasetlerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -164,17 +176,18 @@
             this.BtnKapat.Size = new System.Drawing.Size(75, 45);
             this.BtnKapat.TabIndex = 9;
             this.BtnKapat.Text = "Kapat";
+            this.BtnKapat.Click += new System.EventHandler(this.BtnKapat_Click);
             // 
             // groupControl6
             // 
             this.groupControl6.Controls.Add(this.TxtKasaAdi);
             this.groupControl6.Controls.Add(this.labelControl9);
-            this.groupControl6.Controls.Add(this.TxtKasaKodu);
             this.groupControl6.Controls.Add(this.labelControl10);
             this.groupControl6.Controls.Add(this.TxtHesapNO);
             this.groupControl6.Controls.Add(this.labelControl11);
-            this.groupControl6.Controls.Add(this.TxtHesapAdi);
             this.groupControl6.Controls.Add(this.labelControl12);
+            this.groupControl6.Controls.Add(this.TxtHesapAdi);
+            this.groupControl6.Controls.Add(this.TxtKasaKodu);
             this.groupControl6.Location = new System.Drawing.Point(511, 37);
             this.groupControl6.Name = "groupControl6";
             this.groupControl6.ShowCaption = false;
@@ -196,13 +209,6 @@
             this.labelControl9.Size = new System.Drawing.Size(45, 13);
             this.labelControl9.TabIndex = 14;
             this.labelControl9.Text = "Kasa Adı:";
-            // 
-            // TxtKasaKodu
-            // 
-            this.TxtKasaKodu.Location = new System.Drawing.Point(97, 64);
-            this.TxtKasaKodu.Name = "TxtKasaKodu";
-            this.TxtKasaKodu.Size = new System.Drawing.Size(108, 20);
-            this.TxtKasaKodu.TabIndex = 13;
             // 
             // labelControl10
             // 
@@ -227,13 +233,6 @@
             this.labelControl11.TabIndex = 10;
             this.labelControl11.Text = "Hesap No:";
             // 
-            // TxtHesapAdi
-            // 
-            this.TxtHesapAdi.Location = new System.Drawing.Point(97, 12);
-            this.TxtHesapAdi.Name = "TxtHesapAdi";
-            this.TxtHesapAdi.Size = new System.Drawing.Size(108, 20);
-            this.TxtHesapAdi.TabIndex = 9;
-            // 
             // labelControl12
             // 
             this.labelControl12.Location = new System.Drawing.Point(17, 12);
@@ -241,6 +240,24 @@
             this.labelControl12.Size = new System.Drawing.Size(52, 13);
             this.labelControl12.TabIndex = 8;
             this.labelControl12.Text = "Hesap Adı:";
+            // 
+            // TxtHesapAdi
+            // 
+            this.TxtHesapAdi.Location = new System.Drawing.Point(97, 12);
+            this.TxtHesapAdi.Name = "TxtHesapAdi";
+            this.TxtHesapAdi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.TxtHesapAdi.Size = new System.Drawing.Size(108, 20);
+            this.TxtHesapAdi.TabIndex = 9;
+            // 
+            // TxtKasaKodu
+            // 
+            this.TxtKasaKodu.Location = new System.Drawing.Point(97, 64);
+            this.TxtKasaKodu.Name = "TxtKasaKodu";
+            this.TxtKasaKodu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.TxtKasaKodu.Size = new System.Drawing.Size(108, 20);
+            this.TxtKasaKodu.TabIndex = 13;
             // 
             // groupControl5
             // 
@@ -341,14 +358,14 @@
             // 
             // groupControl4
             // 
-            this.groupControl4.Controls.Add(this.TxtOdemeYeri);
             this.groupControl4.Controls.Add(this.labelControl4);
-            this.groupControl4.Controls.Add(this.TxtFaturaTuru);
             this.groupControl4.Controls.Add(this.labelControl3);
             this.groupControl4.Controls.Add(this.TxtCariAdi);
             this.groupControl4.Controls.Add(this.labelControl2);
-            this.groupControl4.Controls.Add(this.TxtCariKodu);
             this.groupControl4.Controls.Add(this.labelControl1);
+            this.groupControl4.Controls.Add(this.TxtCariKodu);
+            this.groupControl4.Controls.Add(this.TxtFaturaTuru);
+            this.groupControl4.Controls.Add(this.TxtOdemeYeri);
             this.groupControl4.Location = new System.Drawing.Point(31, 37);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.ShowCaption = false;
@@ -357,13 +374,6 @@
             this.groupControl4.Text = "groupControl4";
             this.groupControl4.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl4_Paint);
             // 
-            // TxtOdemeYeri
-            // 
-            this.TxtOdemeYeri.Location = new System.Drawing.Point(85, 94);
-            this.TxtOdemeYeri.Name = "TxtOdemeYeri";
-            this.TxtOdemeYeri.Size = new System.Drawing.Size(108, 20);
-            this.TxtOdemeYeri.TabIndex = 7;
-            // 
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(5, 94);
@@ -371,13 +381,6 @@
             this.labelControl4.Size = new System.Drawing.Size(59, 13);
             this.labelControl4.TabIndex = 6;
             this.labelControl4.Text = "Ödeme Yeri:";
-            // 
-            // TxtFaturaTuru
-            // 
-            this.TxtFaturaTuru.Location = new System.Drawing.Point(85, 66);
-            this.TxtFaturaTuru.Name = "TxtFaturaTuru";
-            this.TxtFaturaTuru.Size = new System.Drawing.Size(108, 20);
-            this.TxtFaturaTuru.TabIndex = 5;
             // 
             // labelControl3
             // 
@@ -393,6 +396,7 @@
             this.TxtCariAdi.Name = "TxtCariAdi";
             this.TxtCariAdi.Size = new System.Drawing.Size(108, 20);
             this.TxtCariAdi.TabIndex = 3;
+            this.TxtCariAdi.EditValueChanged += new System.EventHandler(this.TxtCariAdi_EditValueChanged);
             // 
             // labelControl2
             // 
@@ -402,13 +406,6 @@
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Cari Adı:";
             // 
-            // TxtCariKodu
-            // 
-            this.TxtCariKodu.Location = new System.Drawing.Point(85, 14);
-            this.TxtCariKodu.Name = "TxtCariKodu";
-            this.TxtCariKodu.Size = new System.Drawing.Size(108, 20);
-            this.TxtCariKodu.TabIndex = 1;
-            // 
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(5, 14);
@@ -417,16 +414,51 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Cari Kodu:";
             // 
+            // TxtCariKodu
+            // 
+            this.TxtCariKodu.Location = new System.Drawing.Point(85, 14);
+            this.TxtCariKodu.Name = "TxtCariKodu";
+            this.TxtCariKodu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.TxtCariKodu.Size = new System.Drawing.Size(108, 20);
+            this.TxtCariKodu.TabIndex = 1;
+            // 
+            // TxtFaturaTuru
+            // 
+            this.TxtFaturaTuru.Location = new System.Drawing.Point(85, 66);
+            this.TxtFaturaTuru.Name = "TxtFaturaTuru";
+            this.TxtFaturaTuru.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TxtFaturaTuru.Properties.Items.AddRange(new object[] {
+            "Açık Faturalar",
+            "Kapalı Faturalar"});
+            this.TxtFaturaTuru.Size = new System.Drawing.Size(108, 20);
+            this.TxtFaturaTuru.TabIndex = 5;
+            this.TxtFaturaTuru.SelectedIndexChanged += new System.EventHandler(this.TxtFaturaTuru_SelectedIndexChanged);
+            // 
+            // TxtOdemeYeri
+            // 
+            this.TxtOdemeYeri.Location = new System.Drawing.Point(85, 94);
+            this.TxtOdemeYeri.Name = "TxtOdemeYeri";
+            this.TxtOdemeYeri.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TxtOdemeYeri.Properties.Items.AddRange(new object[] {
+            "Kasa",
+            "Banka"});
+            this.TxtOdemeYeri.Size = new System.Drawing.Size(108, 20);
+            this.TxtOdemeYeri.TabIndex = 7;
+            this.TxtOdemeYeri.EditValueChanged += new System.EventHandler(this.TxtOdemeYeri_EditValueChanged);
+            // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.labelControl17);
             this.groupControl2.Controls.Add(this.groupControl7);
             this.groupControl2.Controls.Add(this.TxtAciklama);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl2.Location = new System.Drawing.Point(0, 421);
+            this.groupControl2.Location = new System.Drawing.Point(0, 299);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.ShowCaption = false;
-            this.groupControl2.Size = new System.Drawing.Size(932, 146);
+            this.groupControl2.Size = new System.Drawing.Size(932, 126);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "groupControl2";
             // 
@@ -442,48 +474,31 @@
             // 
             this.groupControl7.Controls.Add(this.TxtGenelToplam);
             this.groupControl7.Controls.Add(this.labelControl13);
-            this.groupControl7.Controls.Add(this.TxtIndirim);
-            this.groupControl7.Controls.Add(this.labelControl14);
             this.groupControl7.Controls.Add(this.TxtKDV);
             this.groupControl7.Controls.Add(this.labelControl15);
             this.groupControl7.Controls.Add(this.TxtAraToplam);
             this.groupControl7.Controls.Add(this.labelControl16);
-            this.groupControl7.Location = new System.Drawing.Point(706, 26);
+            this.groupControl7.Location = new System.Drawing.Point(706, 11);
             this.groupControl7.Name = "groupControl7";
             this.groupControl7.ShowCaption = false;
-            this.groupControl7.Size = new System.Drawing.Size(214, 108);
+            this.groupControl7.Size = new System.Drawing.Size(214, 88);
             this.groupControl7.TabIndex = 2;
             this.groupControl7.Text = "groupControl7";
             // 
             // TxtGenelToplam
             // 
-            this.TxtGenelToplam.Location = new System.Drawing.Point(93, 84);
+            this.TxtGenelToplam.Location = new System.Drawing.Point(93, 56);
             this.TxtGenelToplam.Name = "TxtGenelToplam";
             this.TxtGenelToplam.Size = new System.Drawing.Size(108, 20);
             this.TxtGenelToplam.TabIndex = 23;
             // 
             // labelControl13
             // 
-            this.labelControl13.Location = new System.Drawing.Point(13, 84);
+            this.labelControl13.Location = new System.Drawing.Point(13, 56);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(68, 13);
             this.labelControl13.TabIndex = 22;
             this.labelControl13.Text = "Genel Toplam:";
-            // 
-            // TxtIndirim
-            // 
-            this.TxtIndirim.Location = new System.Drawing.Point(93, 56);
-            this.TxtIndirim.Name = "TxtIndirim";
-            this.TxtIndirim.Size = new System.Drawing.Size(108, 20);
-            this.TxtIndirim.TabIndex = 21;
-            // 
-            // labelControl14
-            // 
-            this.labelControl14.Location = new System.Drawing.Point(13, 56);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(36, 13);
-            this.labelControl14.TabIndex = 20;
-            this.labelControl14.Text = "İndirim:";
             // 
             // TxtKDV
             // 
@@ -519,7 +534,7 @@
             // 
             this.TxtAciklama.Location = new System.Drawing.Point(66, 10);
             this.TxtAciklama.Name = "TxtAciklama";
-            this.TxtAciklama.Size = new System.Drawing.Size(255, 124);
+            this.TxtAciklama.Size = new System.Drawing.Size(255, 104);
             this.TxtAciklama.TabIndex = 19;
             // 
             // groupControl3
@@ -529,47 +544,130 @@
             this.groupControl3.Location = new System.Drawing.Point(0, 180);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.ShowCaption = false;
-            this.groupControl3.Size = new System.Drawing.Size(932, 241);
+            this.groupControl3.Size = new System.Drawing.Size(932, 119);
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "groupControl3";
             // 
             // gridControl1
             // 
+            this.gridControl1.DataSource = this.satisFaturasiBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(2, 2);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(928, 237);
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.BtnButonSec});
+            this.gridControl1.Size = new System.Drawing.Size(928, 115);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
+            // 
+            // satisFaturasiBindingSource
+            // 
+            this.satisFaturasiBindingSource.DataMember = "SatisFaturasi";
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colBARKOD,
+            this.colSTOKKODU,
+            this.colSTOKADI,
+            this.colBIRIM,
+            this.colMIKTAR,
+            this.colBIRIMFIYAT,
+            this.colKDV,
+            this.colTOPLAM});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // colBARKOD
+            // 
+            this.colBARKOD.FieldName = "BARKOD";
+            this.colBARKOD.Name = "colBARKOD";
+            this.colBARKOD.Visible = true;
+            this.colBARKOD.VisibleIndex = 0;
+            // 
+            // colSTOKKODU
+            // 
+            this.colSTOKKODU.FieldName = "STOKKODU";
+            this.colSTOKKODU.Name = "colSTOKKODU";
+            this.colSTOKKODU.Visible = true;
+            this.colSTOKKODU.VisibleIndex = 1;
+            // 
+            // colSTOKADI
+            // 
+            this.colSTOKADI.FieldName = "STOKADI";
+            this.colSTOKADI.Name = "colSTOKADI";
+            this.colSTOKADI.Visible = true;
+            this.colSTOKADI.VisibleIndex = 2;
+            // 
+            // colBIRIM
+            // 
+            this.colBIRIM.FieldName = "BIRIM";
+            this.colBIRIM.Name = "colBIRIM";
+            this.colBIRIM.Visible = true;
+            this.colBIRIM.VisibleIndex = 3;
+            // 
+            // colMIKTAR
+            // 
+            this.colMIKTAR.FieldName = "MIKTAR";
+            this.colMIKTAR.Name = "colMIKTAR";
+            this.colMIKTAR.Visible = true;
+            this.colMIKTAR.VisibleIndex = 4;
+            // 
+            // colBIRIMFIYAT
+            // 
+            this.colBIRIMFIYAT.FieldName = "BIRIMFIYAT";
+            this.colBIRIMFIYAT.Name = "colBIRIMFIYAT";
+            this.colBIRIMFIYAT.Visible = true;
+            this.colBIRIMFIYAT.VisibleIndex = 5;
+            // 
+            // colKDV
+            // 
+            this.colKDV.FieldName = "KDV";
+            this.colKDV.Name = "colKDV";
+            this.colKDV.Visible = true;
+            this.colKDV.VisibleIndex = 6;
+            // 
+            // colTOPLAM
+            // 
+            this.colTOPLAM.FieldName = "TOPLAM";
+            this.colTOPLAM.Name = "colTOPLAM";
+            this.colTOPLAM.Visible = true;
+            this.colTOPLAM.VisibleIndex = 7;
+            // 
+            // BtnButonSec
+            // 
+            this.BtnButonSec.AutoHeight = false;
+            this.BtnButonSec.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.BtnButonSec.Name = "BtnButonSec";
+            this.BtnButonSec.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.BtnButonSec_ButtonClick);
             // 
             // FrmSatisFaturasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 567);
+            this.ClientSize = new System.Drawing.Size(932, 425);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.IconOptions.LargeImage = global::Odev.Properties.Resources.listmultilevel_righttoleft_32x32;
             this.Name = "FrmSatisFaturasi";
             this.Text = "SATIŞ FATURASI";
+            this.Load += new System.EventHandler(this.FrmSatisFaturasi_Load);
+            this.Shown += new System.EventHandler(this.FrmSatisFaturasi_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
             this.groupControl6.ResumeLayout(false);
             this.groupControl6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtKasaAdi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtKasaKodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtHesapNO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtHesapAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtKasaKodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
             this.groupControl5.PerformLayout();
@@ -582,10 +680,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtOdemeYeri.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtFaturaTuru.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtCariAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtCariKodu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtFaturaTuru.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtOdemeYeri.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
@@ -593,14 +691,16 @@
             this.groupControl7.ResumeLayout(false);
             this.groupControl7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtGenelToplam.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtIndirim.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtKDV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAraToplam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.satisFaturasiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnButonSec)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datasetlerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -616,18 +716,14 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.TextEdit TxtFaturaTuru;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit TxtCariAdi;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit TxtCariKodu;
         private DevExpress.XtraEditors.TextEdit TxtKasaAdi;
         private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.TextEdit TxtKasaKodu;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.TextEdit TxtHesapNO;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.TextEdit TxtHesapAdi;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.TextEdit TxtIrsalıyeNo;
@@ -635,7 +731,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.TextEdit TxtFaturaNo;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.TextEdit TxtOdemeYeri;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.SimpleButton BtnKaydet;
         private DevExpress.XtraEditors.SimpleButton BtnSil;
@@ -643,8 +738,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl7;
         private DevExpress.XtraEditors.TextEdit TxtGenelToplam;
         private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.TextEdit TxtIndirim;
-        private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.TextEdit TxtKDV;
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.TextEdit TxtAraToplam;
@@ -653,5 +746,22 @@
         private DevExpress.XtraEditors.DateEdit TxtIrsalıyeTarihi;
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.MemoEdit TxtAciklama;
+        private System.Windows.Forms.BindingSource satisFaturasiBindingSource;
+    //    private Datasetler datasetler;
+        private DevExpress.XtraGrid.Columns.GridColumn colBARKOD;
+        private DevExpress.XtraGrid.Columns.GridColumn colSTOKKODU;
+        private DevExpress.XtraGrid.Columns.GridColumn colSTOKADI;
+        private DevExpress.XtraGrid.Columns.GridColumn colBIRIM;
+        private DevExpress.XtraGrid.Columns.GridColumn colMIKTAR;
+        private DevExpress.XtraGrid.Columns.GridColumn colBIRIMFIYAT;
+        private DevExpress.XtraGrid.Columns.GridColumn colKDV;
+        private DevExpress.XtraGrid.Columns.GridColumn colTOPLAM;
+        private System.Windows.Forms.BindingSource datasetlerBindingSource;
+        private DevExpress.XtraEditors.ButtonEdit TxtCariKodu;
+        private DevExpress.XtraEditors.ComboBoxEdit TxtFaturaTuru;
+        private DevExpress.XtraEditors.ButtonEdit TxtHesapAdi;
+        private DevExpress.XtraEditors.ButtonEdit TxtKasaKodu;
+        private DevExpress.XtraEditors.ComboBoxEdit TxtOdemeYeri;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit BtnButonSec;
     }
 }

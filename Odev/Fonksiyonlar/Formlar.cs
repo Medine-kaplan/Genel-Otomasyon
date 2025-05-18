@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace Odev.Fonksiyonlar
 {
@@ -195,6 +196,94 @@ namespace Odev.Fonksiyonlar
 
         #endregion
 
+        #region Çek Formları
+        public void KendiCekimiz(int Id = 0, bool Ac = false)
+        {
+            Modul_Cek.FrmKendiCekimiz frm = new Modul_Cek.FrmKendiCekimiz();
+            //if(Ac);
+            frm.ShowDialog();
+        }
+        public void MusteriCeki(int id=0,bool Ac=false)
+        {
+            Modul_Cek.FrmMusteriCeki frm = new Modul_Cek.FrmMusteriCeki();
+            //if(Ac);
+            frm.ShowDialog();
+        }
+        public void CariyeCekCikisi()
+        {
+            Modul_Cek.FrmCariyeCekCikisi frm = new Modul_Cek.FrmCariyeCekCikisi();
+            frm.ShowDialog();
+
+        }
+        public void BankayaCekCikisi()
+        {
+            Modul_Cek.FrmBankayaCekCikisi frm = new Modul_Cek.FrmBankayaCekCikisi();
+            frm.ShowDialog();
+
+        }
+        public int CekListesi(bool Secim=false)
+        {
+            Modul_Cek.FrmCekListesi frm =new Modul_Cek.FrmCekListesi();
+            if (Secim)
+            {
+                frm.Secim = true;
+                frm.ShowDialog();
+
+            }
+            else
+            {
+                foreach(DevExpress.XtraEditors.XtraForm K in AnaForm.ActiveForm.MdiChildren)
+                {
+                    if (K.Text=="Çek Listesi")
+                    {
+                        K.BringToFront();
+                        return AnaForm.Aktarma;
+                    }
+                }
+                frm.MdiParent = AnaForm.ActiveForm;
+                frm.Show();
+            }
+            return AnaForm.Aktarma;
+        }
+
+        #endregion
+
+        #region Fatura Formları
+
+        public void Fatura(bool Ac=false,int ID=-1,  bool Irsaliye=false)
+        {
+            Modul_Fatura.FrmSatisFaturasi frm = new Modul_Fatura.FrmSatisFaturasi(Ac,ID, Irsaliye);
+            //if (Ac) frm = new Modul_Fatura.FrmSatisFaturasi(Ac, ID);
+            //else frm = new Modul_Fatura.FrmSatisFaturasi();
+
+            frm.MdiParent= AnaForm.ActiveForm;
+            frm.Show();
+        }
+
+       public void FaturaListesi(bool Secim=false)
+        {
+            Modul_Fatura.FrmFaturaListesi frm = new Modul_Fatura.FrmFaturaListesi(Secim);
+            if (Secim) frm.ShowDialog();
+            else
+            {
+                frm.MdiParent = AnaForm.ActiveForm;
+                frm.Show();
+            }
+        }
+
+
+        public void KullaniciYonetimi()
+        {
+            Modul_Kullanici.FrmKullaniciYonetimi frm = new Modul_Kullanici.FrmKullaniciYonetimi();
+            frm.ShowDialog();
+        }
+
+        public void KullaniciPanel(bool ac=false,int ID=-1)
+        {
+            Modul_Kullanici.FrmKullaniciPanel frm = new Modul_Kullanici.FrmKullaniciPanel();
+            frm.ShowDialog();
+        }
+        #endregion
 
     }
 }
